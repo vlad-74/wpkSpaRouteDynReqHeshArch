@@ -15,9 +15,10 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "wbk-dev": "set NODE_ENV=development&set NODE_ARCH=1&webpack&node server.js",
-    "wbk-pro": "set NODE_ENV=development&set NODE_ARCH=0&webpack&node server.js",
-    "wbk-pro2": "set NODE_ENV=production&set NODE_ARCH=0&webpack&node server.js"
+    "wbk-dev-s": "set NODE_ENV=development&set NODE_ARCH=1&set NODE_WATCH=0&webpack&node server.js",
+    "wbk-dev-wat": "set NODE_ENV=development&set NODE_ARCH=1&set NODE_WATCH=1&webpack",
+    "wbk-pro": "set NODE_ENV=development&set NODE_ARCH=0&set NODE_WATCH=0&webpack&node server.js",
+    "wbk-pro2": "set NODE_ENV=production&set NODE_ARCH=0&set NODE_WATCH=0&webpack&node server.js"
   },
   "author": "",
   "license": "ISC"

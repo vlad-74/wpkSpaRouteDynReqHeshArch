@@ -2,6 +2,8 @@
 
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const NODE_ARCH = process.env.NODE_ARCH || 1;
+const NODE_WATCH = process.env.NODE_WATCH || 0;
+
 const webpack = require('webpack');
 //assetsPlugin - СОЗДАЕТ ФАЙЛ assets.json С ИНФОРМАЦИЕЙ О СБОРКЕ (hesh)
 const assetsPlugin = require('assets-webpack-plugin');
@@ -27,7 +29,7 @@ module.exports = {
     filename: "[name][hash].js"
   },
 
-  // watch: NODE_ENV == 'development',
+  watch: NODE_WATCH == 1,
 
   watchOptions: {
     aggregateTimeout: 100
@@ -93,6 +95,12 @@ if (NODE_ENV == 'production') {
   );
 }else{
   console.log('!!!!!!WEBPACK - development!!!!! ПРОД - set NODE_ENV=production&webpack')
+};
+console.log(NODE_WATCH);
+if (NODE_WATCH == 1) {
+    console.log('!!!!!!WEBPACK - WATCH!!!!! set NODE_WATCH  == 0')
+}else{
+  console.log('!!!!!!WEBPACK - NOT WATCH!!!!! set NODE_WATCH  == 1')
 };
 
 console.log('http://127.0.0.1:3000/ver')

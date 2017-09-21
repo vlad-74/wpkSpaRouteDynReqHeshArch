@@ -1,9 +1,10 @@
 # Webpack для SPA сайта :<br />
 1. динамическая подгрузка js файлов при **РОУТИНГЕ.**
 2. scripts в package.json:<br />
-2.1. "wbk-dev": "set NODE_ENV=development&set NODE_ARCH=1&webpack&node server.js"<br /> 
-2.2. "wbk-pro2": "set NODE_ENV=production&set NODE_ARCH=0&webpack&node server.js" (error)<br /> 
-2.3. "wbk-pro": "set NODE_ENV=development&set NODE_ARCH=0&webpack&node server.js" - АРХИВАЦИЯ!!!<br />
+    2.1. "wbk-dev-s": "set NODE_ENV=development&set NODE_ARCH=1&set NODE_WATCH=0&webpack&node server.js",<br />
+    2.2. "wbk-dev-wat": "set NODE_ENV=development&set NODE_ARCH=1&set NODE_WATCH=1&webpack",<br />
+    2.3. "wbk-pro": "set NODE_ENV=development&set NODE_ARCH=0&set NODE_WATCH=0&webpack&node server.js",<br />
+    2.4. "wbk-pro2": "set NODE_ENV=production&set NODE_ARCH=0&set NODE_WATCH=0&webpack&node server.js"<br />
 3. filename: "[name][hash].js" - hesh в названиях файлов, в том числе динамических!!!
 4. История версий в файле ver.js - http://127.0.0.1:3000/ver
 
